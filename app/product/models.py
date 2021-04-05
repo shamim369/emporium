@@ -20,7 +20,8 @@ class SubCategory(models.Model):
 class Product(models.Model):
     product_name = models.CharField(max_length=255, verbose_name='Product Name')
     short_description = models.TextField(max_length=500, null=True, blank=True, verbose_name='Short Description')
-    long_description = models.CharField(max_length=10000, null=True, blank=True, verbose_name='Long Description')
+    long_description = models.TextField(max_length=10000, null=True, blank=True, verbose_name='Long Description')
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
     price = models.PositiveIntegerField(default=0, verbose_name='Price')
     is_available = models.BooleanField(default=True)
     is_active = models.BooleanField(default=True)
