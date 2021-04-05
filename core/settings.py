@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     
     'app.accounts',
     'app.emporium',
+    'app.product',
 ]
 
 MIDDLEWARE = [
