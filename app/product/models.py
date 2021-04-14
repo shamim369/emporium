@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Category(models.Model):
-    category_title = models.CharField(max_length=50, unique=True, verbose_name='Category Title')
-    category_description = models.TextField(max_length=255, null=True, blank=True, verbose_name='Description')
+    title = models.CharField(max_length=50, unique=True, verbose_name='Category Title')
+    description = models.TextField(max_length=255, null=True, blank=True, verbose_name='Description')
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
